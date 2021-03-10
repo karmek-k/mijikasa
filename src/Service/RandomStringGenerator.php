@@ -18,7 +18,11 @@ class RandomStringGenerator
     public function __construct(array $customCharacters = null)
     {
         if ($customCharacters === null) {
-            $this->characters = array_merge(range('A', 'z'));
+            $this->characters = array_merge(
+                range('0', '9'),
+                range('A', 'Z'),
+                range('a', 'z'),
+            );
         } else {
             $this->characters = $customCharacters;
         }
