@@ -12,6 +12,8 @@ class RandomStringGenerator
 
     /**
      * RandomStringGenerator constructor.
+     * By default, RandomStringGenerator uses only alphanumeric characters.
+     *
      * @param array|null $customCharacters Specify if you want to use custom characters in the random string.
      */
     #[Pure]
@@ -29,15 +31,18 @@ class RandomStringGenerator
     }
 
     /**
-     * Generates a random string of given legth.
+     * Generates a random string of given length.
      *
      * @param int $length Length of the string.
      * @return string
      */
-    #[Pure]
-    public function generate(int $length = 10): string
+    public function generate(int $length): string
     {
-        $result = array_rand($this->characters, $length);
+        $result = [];
+
+        for ($i = 0; $i < $length; ++$i) {
+            $result[] = $this->characters[array_rand($this->characters)];
+        }
 
         return implode($result);
     }
