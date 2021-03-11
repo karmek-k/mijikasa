@@ -25,4 +25,15 @@ class RandomStringGeneratorTest extends TestCase
         $this->assertTrue(ctype_alnum($longString));
         $this->assertFalse(ctype_alnum($emptyString));
     }
+
+    public function testGenerateCustomCharacters()
+    {
+        $abcGenerator = new RandomStringGenerator(['a', 'b', 'c']);
+
+        $abcString = $abcGenerator->generate(5);
+        $emptyString = $abcGenerator->generate(0);
+
+        $this->assertTrue((bool) preg_match('/[abc]{5}/', $abcString));
+        $this->assertFalse((bool) preg_match('/[abc]{5}/', $emptyString));
+    }
 }
