@@ -12,13 +12,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Link
 {
     /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
-
-    /**
      * @ORM\Column(type="text")
      * @Assert\NotBlank
      * @Assert\Url
@@ -26,14 +19,15 @@ class Link
     private $url;
 
     /**
+     * @ORM\Id()
      * @ORM\Column(type="string", length=255)
      * @Assert\Blank
      */
     private $hash;
 
-    public function getId(): ?int
+    public function __construct(string $hash)
     {
-        return $this->id;
+        $this->hash = $hash;
     }
 
     public function getUrl(): ?string
@@ -51,12 +45,5 @@ class Link
     public function getHash(): ?string
     {
         return $this->hash;
-    }
-
-    public function setHash(string $hash): self
-    {
-        $this->hash = $hash;
-
-        return $this;
     }
 }
