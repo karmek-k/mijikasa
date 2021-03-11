@@ -14,7 +14,7 @@ class RandomStringGenerator
      * RandomStringGenerator constructor.
      * By default, RandomStringGenerator uses only alphanumeric characters.
      *
-     * @param array|null $customCharacters Specify if you want to use custom characters in the random string.
+     * @param string[]|null $customCharacters Specify if you want to use custom characters in the random string.
      */
     #[Pure]
     public function __construct(array $customCharacters = null)
