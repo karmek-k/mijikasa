@@ -1,20 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Welcome!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <h1>Welcome to Mijikasa</h1>
+    <p>
+        This is a simple URL shortener. More features will be added soon!
+    </p>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    {{ form_start(url_form) }}
+    <div class="url-form">
+        <div class="url-input">
+            <b>{{ form_label(url_form.url) }}</b>
+            <br />
+            {{ form_widget(url_form.url) }}
+        </div>
+        <div class="url-submit">
+            {{ form_row(url_form.submit) }}
+        </div>
+        <div class="url-errors">
+            {{ form_errors(url_form.url) }}
+        </div>
+    </div>
+    {{ form_end(url_form) }}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Bartosz/source/php/mijikasa/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Bartosz/source/php/mijikasa/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <p>
+        "Mijikasa" (短さ, "shortness") is a Japanese word
+        created from the adjective "mijikai" (短い, "short")
+    </p>
 {% endblock %}

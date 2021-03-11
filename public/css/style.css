@@ -1,0 +1,57 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background: gray;
+}
+
+h1,
+p {
+    margin: .25rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 3em auto auto;
+    padding: 1rem;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.url-form {
+    margin: 1em;
+}
+
+.url-form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.url-input {
+    margin: .5em;
+}
+
+.url-submit {
+    display: flex;
+    justify-content: center;
+}
+
+.url-errors {
+    font-size: small;
+    color: red;
+}
+
+.url-errors ul {
+    padding: 0;
+    list-style: none;
+}
