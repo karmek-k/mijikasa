@@ -7,7 +7,23 @@
     <p>
         This is a simple URL shortener. More features will be added soon!
     </p>
-    {{ form(url_form) }}
+
+    {{ form_start(url_form) }}
+    <div class="url-form">
+        <div class="url-input">
+            <b>{{ form_label(url_form.url) }}</b>
+            <br />
+            {{ form_widget(url_form.url) }}
+        </div>
+        <div class="url-submit">
+            {{ form_row(url_form.submit) }}
+        </div>
+        <div class="url-errors">
+            {{ form_errors(url_form.url) }}
+        </div>
+    </div>
+    {{ form_end(url_form) }}
+
     <p>
         "Mijikasa" (短さ, "shortness") is a Japanese word
         created from the adjective "mijikai" (短い, "short")
