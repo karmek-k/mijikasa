@@ -20,15 +20,15 @@ class Link
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank
+     * @Assert\Url
      */
-    #[Assert\NotBlank]
-    #[Assert\Url]
     private $url;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Blank
      */
-    #[Assert\Blank]
     private $hash;
 
     public function getId(): ?int
