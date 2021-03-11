@@ -1,0 +1,17 @@
+name: Test with PHPUnit
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: php-actions/composer@v5
+      - uses: php-actions/phpunit@v2
+      
