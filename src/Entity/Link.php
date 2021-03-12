@@ -25,10 +25,10 @@ class Link
      */
     private $hash;
 
-//    public function __construct(string $hash)
-//    {
-//        $this->hash = $hash;
-//    }
+    public function __construct(string $hash)
+    {
+        $this->hash = $hash;
+    }
 
     public function getUrl(): ?string
     {
