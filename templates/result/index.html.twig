@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Success!{% endblock %}
+
+{% block body %}
+    <h1>Success!</h1>
+    <p>Your link has been shortened to:</p>
+    <a href="{{ path('redirect', { hash: link.hash }) }}">
+        <b>{{ schemeAndHost }}{{ path('redirect', { hash: link.hash }) }}</b>
+    </a>
+    <p>and it redirects to:</p>
+    <a href="{{ link.url }}">
+        <b>{{ link.url }}</b>
+    </a>
+{% endblock %}
