@@ -34,8 +34,7 @@ class HomeController extends AbstractController
                 $em->flush();
             }
 
-            // TODO: redirect to other page
-            return new Response('Link successfully shortened');
+            return $this->redirectToRoute('result', ['hash' => $link->getHash()]);
         }
 
         return $this->render('home/index.html.twig', [
