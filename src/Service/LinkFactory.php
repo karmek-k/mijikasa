@@ -5,6 +5,11 @@ namespace App\Service;
 use App\Entity\Link;
 use App\Repository\LinkRepository;
 
+/**
+ * Class LinkFactory
+ * @deprecated Create links manually instead.
+ * @package App\Service
+ */
 class LinkFactory
 {
     public function __construct(
