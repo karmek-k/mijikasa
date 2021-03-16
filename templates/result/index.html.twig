@@ -8,4 +8,8 @@
     <a href="{{ path('redirect', { hash: link.hash }) }}">
         <b>{{ schemeAndHost }}{{ path('redirect', { hash: link.hash }) }}</b>
     </a>
+    <p>and it redirects to:</p>
+    <a href="{{ link.url }}">
+        <b>{{ link.url }}</b>
+    </a>
 {% endblock %}
