@@ -4,9 +4,6 @@
 namespace App\Service;
 
 
-use App\Entity\Link;
-use App\Repository\LinkRepository;
-
 class LinkHashGenerator
 {
     public function __construct(
@@ -14,6 +11,12 @@ class LinkHashGenerator
         private HashAvailabilityChecker $checker,
     ) {}
 
+    /**
+     * Creates a new hash that has not been used before.
+     *
+     * @param int $minHashLength
+     * @return string
+     */
     public function generate(int $minHashLength = 5): string
     {
         do {
