@@ -1,5 +1,7 @@
 # mijikasa
 
+[![Build Status](https://travis-ci.com/karmek-k/mijikasa.svg?branch=master)](https://travis-ci.com/karmek-k/mijikasa)
+
 This is a simple URL shortener. More features will be added soon!
 
 **Mijikasa** (短さ, *shortness*) is a Japanese word
