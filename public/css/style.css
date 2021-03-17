@@ -51,12 +51,13 @@ a {
     justify-content: center;
 }
 
-.url-errors {
+form ul {
     font-size: small;
     color: red;
-}
-
-.url-errors ul {
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
 }
