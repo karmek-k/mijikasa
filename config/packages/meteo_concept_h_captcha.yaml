@@ -1,0 +1,8 @@
+meteo_concept_h_captcha:
+    hcaptcha:
+        site_key: 346f549c-a3bd-448b-8b19-97c415550493
+        secret: '%env(resolve:HCAPTCHA_SECRET)%'
+
+twig:
+    form_themes:
+        - '@MeteoConceptHCaptcha/hcaptcha_form.html.twig'
