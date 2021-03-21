@@ -9,7 +9,7 @@ created from the adjective **mijikai** (短い, *short*)
 
 ## Features
 
-- reCAPTCHA protection
+- hCaptcha protection
 - easy deployment on Heroku
 
 ## Installation
@@ -44,7 +44,7 @@ Running the test suite:
 
 `php bin/phpunit`
 
-reCAPTCHA is disabled in the `test` environment.
+hCaptcha is disabled in the `test` environment.
 
 ## License
 
